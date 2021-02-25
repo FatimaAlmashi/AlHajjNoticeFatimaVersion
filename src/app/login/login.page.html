@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true" class="content-bg">
+  <ion-grid style="height: 99%;">
+    <ion-row style=" height: 100%;" class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12">
+        <ion-card class="login-card">
+          <ion-grid>
+            <ion-row style="justify-content: center; padding-top: 2rem;">
+              <ion-img src="../../assets/images/logo-splash.png" style="width: 65%; padding-bottom:1rem;"></ion-img>
+            </ion-row>
+            <ion-row style="justify-content: center;">
+              <form [formGroup]="LoginForm" (ngSubmit)="doLogin()">
+                <ion-grid>
+                  <ion-col>
+                    <ion-row class="ion-justify-content-center">
+                      <ion-item color="light"> 
+                        <ion-input formControlName="username" type="text" placeholder="اسم المستخدم"></ion-input>
+                      </ion-item>
+                    </ion-row>
+                    <ion-label *ngIf="username.dirty && username.errors && username.errors.required;" color="danger">عفوا ، لقد نسيت ادخال اسم المستخدم</ion-label>
+                    <ion-label *ngIf="username.errors && username.errors.minlength;" color="danger">الرجاء إدخال اسم مستخدم صحيح!</ion-label>
+                    <ion-row>
+                      <ion-item color="light">
+                        <ion-input formControlName="password" type="password" placeholder="كلمة المرور"></ion-input>
+                      </ion-item>
+                    </ion-row>
+                    <ion-label *ngIf="password.dirty && password.touched && password.errors && password.errors.required;" color="danger">عفوا ، لقد نسيت ادخال كلمة المرور</ion-label>
+                    <ion-label *ngIf="password.touched && password.errors && password.errors.minlength;" color="danger">كلمة المرور اقل من ٨ احرف!</ion-label>
+                    <ion-row style="margin-top: 1rem;" class="ion-justify-content-center">
+                      <ion-button [disabled]="!LoginForm.valid" expand="full" color="mycolor" type="submit" style="width: 100%;">تسجيل الدخول</ion-button>
+                    </ion-row>
+                  </ion-col>
+                </ion-grid>
+              </form>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row style="height: 1%;">
+    <ion-col style="background-color: #2abdee;"></ion-col>
+    <ion-col style="background-color: #0395bb"></ion-col>
+    <ion-col style="background-color: #017da2"></ion-col>
+    <ion-col style="background-color: #06b39e"></ion-col>
+    <ion-col style="background-color: #72bf49"></ion-col>
+    <ion-col style="background-color: #018d5e"></ion-col>
+  </ion-row>
+  
+</ion-content>

@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" class="content-bg">
+  <ion-grid style="height: 100%;">
+      <!-- CONTENT ROW -->
+      <ion-row class="ion-justify-content-center ion-align-items-center" style=" height: 95%;">
+        <ion-col size="6" style="padding-bottom: 80%;">
+          <ion-row style="padding-bottom: 10%;">
+            <img src="../../assets/images/logo-splash.png" >
+          </ion-row>
+          <ion-row style="justify-content: center;">
+            <p style="font-size: 30px; font-weight: bold;">بلاغات الحج</p>
+          </ion-row>
+          <ion-row style="justify-content: center;">
+            <ion-button routerLink="/login" color="mycolor"> دخول</ion-button>
+          </ion-row> 
+        </ion-col>
+      </ion-row>
+      <!-- FOOTER ROW -->
+      <ion-row style="justify-content: center; font-size:14px; height: 5%; align-content: center;">
+        خدمة مقدمة من أمانة العاصمة المقدسة 2020
+      </ion-row> 
+  </ion-grid>
 </ion-content>
+
+
+
